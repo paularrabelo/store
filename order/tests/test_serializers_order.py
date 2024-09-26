@@ -4,7 +4,7 @@ from order.factories import OrderFactory, ProductFactory
 from order.serializers import OrderSerializer
 
 class TestOrderSerializer(TestCase):
-    def test_order(self) -> None:
+    def setUp(self) -> None:
         self.product_test = ProductFactory()
 
         self.order = OrderFactory(product=(self.product_test))
